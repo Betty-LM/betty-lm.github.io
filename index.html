@@ -1,15 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon CV</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;400&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer ></script>
+    <title>Générateur de noms de ...</title>
 </head>
-<body>
-    <h1>Essai CV</h1>
 
+<body>
+    <main>
+        <div class="contenair">
+        <h1>TITRE</h1>
+        <div class="wrapper">
+
+            <section class="right">PARTIE DROITE
+                <h2>Accroche</h2>
+                <div class="form">
+                    <form action="" method="post" class="choice-form">
+                        <!-- question 1ere lettre select-->
+                        <label for="Première lettre de ton prénom">Sélectionne la première lettre de ton prénom</label>
+                        <select name="Première lettre de ton prénom" id="letter-firstname">
+                            <option value="">Ton prénom commence par...</option>
+                            <option value="a">A</option>
+                            <option value="b">B</option>
+                            <option value="c">C</option>
+                            <option value="d">D</option>
+                            <option value="e">E</option>
+                            <option value="f">F</option>
+                            <option value="g">G</option>
+                            <option value="h">H</option>
+                            <option value="i">I</option>
+                            <option value="j">J</option>
+                            <option value="k">K</option>
+                            <option value="l">L</option>
+                            <option value="m">M</option>
+                            <option value="n">N</option>
+                            <option value="o">O</option>
+                            <option value="p">P</option>
+                            <option value="q">Q</option>
+                            <option value="r">R</option>
+                            <option value="s">S</option>
+                            <option value="t">T</option>
+                            <option value="u">U</option>
+                            <option value="v">V</option>
+                            <option value="w">W</option>
+                            <option value="x">X</option>
+                            <option value="y">Y</option>
+                            <option value="z">Z</option>
+                        </select>
+                       
+                        <!-- question 1ere lettre nom select -->
+                        <label for="Première lettre de ton nom">Sélectionne la première lettre de ton nom</label>
+                        <select name="Première lettre de ton nom" id="letter-lastname">
+                            <option value="">Ton nom commence par...</option>
+                            <option value="a">A</option>
+                            <option value="b">B</option>
+                            <option value="c">C</option>
+                            <option value="d">D</option>
+                            <option value="e">E</option>
+                            <option value="f">F</option>
+                            <option value="g">G</option>
+                            <option value="h">H</option>
+                            <option value="i">I</option>
+                            <option value="j">J</option>
+                            <option value="k">K</option>
+                            <option value="l">L</option>
+                            <option value="m">M</option>
+                            <option value="n">N</option>
+                            <option value="o">O</option>
+                            <option value="p">P</option>
+                            <option value="q">Q</option>
+                            <option value="r">R</option>
+                            <option value="s">S</option>
+                            <option value="t">T</option>
+                            <option value="u">U</option>
+                            <option value="v">V</option>
+                            <option value="w">W</option>
+                            <option value="x">X</option>
+                            <option value="y">Y</option>
+                            <option value="z">Z</option>
+                        </select>
+
+                        <!-- question mois select-->
+                        <label for="Ton mois d'anniversaire">Sélectionne le mois de ton anniversaire</label>
+                        <select name="Ton mois d'anniversaire" id="month">
+                            <option value="">Ton anniversaire est au mois de...</option>
+                            <option value="Janvier">Janvier</option>
+                            <option value="Février">Février</option>
+                            <option value="Mars">Mars</option>
+                            <option value="Avril">Avril</option>
+                            <option value="Mai">Mai</option>
+                            <option value="Juin">Juin</option>
+                            <option value="Juillet">Juillet</option>
+                            <option value="Août">Août</option>
+                            <option value="Septembre">Septembre</option>
+                            <option value="Octobre">Octobre</option>
+                            <option value="Novembre">Novembre</option>
+                            <option value="Décembre">Décembre</option>
+                        </select>
+                        
+                        <button>Générer</button>
+                    </form>
+                </div>
+            </section>
+
+
+            <section class="left">PARTIE GAUCHE
+                <h2>Accroche</h2>
+                <form action="" method="post" class="random-form">
+
+                    <p>Laisser le hasard</p>
+
+                    <button>Générer</button>
+                </form>
+            </section>
+
+
+        </div>
+    </div>
+    </main>
+
+
+    <div class="hidden">
+        <section>
+        <h1></h1>
+        <p>Result quand form soumis</p>
+    </section>
+    </div>
 
 </body>
+
 </html>
