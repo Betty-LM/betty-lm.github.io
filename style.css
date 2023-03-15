@@ -6,30 +6,19 @@ body {
 }
 
 .contenair {
+    width: 80%;
     background-color: beige;
     border: 1px black solid;
     border-radius: 5%;
     margin: 3rem;
     padding: 2rem;
     overflow: hidden;
+    text-align: center;
 }
 
 .wrapper {
     display: flex;
 
-}
-
-section {
-    text-align: center;
-    background-color: aquamarine;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
-    border: 1px black solid;
-    width: 50%;
-    margin: 3rem;
-    padding: 2rem;
-    border-radius: 5%;
 }
 
 .form {
@@ -42,6 +31,10 @@ select {
     display: block;
     width: 100%;
     border-radius: 2rem;
+    height: 2rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Outfit', sans-serif;
+    background-color: white;
 }
 
 button {
@@ -80,3 +73,37 @@ h1 {
     width: auto;
 }
 
+@media screen and (max-width : 800px) {
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contenair{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    section {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+section {
+    text-align: center;
+    background-color: aquamarine;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    border: 1px black solid;
+    width: 50%;
+    margin: 3rem;
+    padding: 2rem;
+    border-radius: 5%;
+}
