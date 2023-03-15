@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer ></script>
     <script src="syllabes.js" defer ></script>
+    <script src="syllabeRandom.js" defer ></script>
     <script src="type.js" defer ></script>
+    <script src="typeRandom.js" defer ></script>
 
     <title>Générateur de noms de ...</title>
 </head>
@@ -22,6 +24,14 @@
     <main>
         <div class="contenair">
         <h1>TITRE</h1>
+
+
+        <div role="dialog" aria-modal="true" aria-labelledby="modal-heading" class="error" hidden>
+            <h1></h1>
+            <p>Zut ! Tu n'as pas choisi de lettre...</p>
+            <button class="back">Retour</button>
+        </div>
+
         <div class="wrapper">
 
             <section class="right">PARTIE DROITE
@@ -115,7 +125,6 @@
                 </div>
             </section>
 
-
             <section class="left">PARTIE GAUCHE
                 <h2>Accroche</h2>
                 <form action="" method="post" class="random-form">
@@ -138,7 +147,7 @@
         <p>Result quand form soumis</p>
     </section>
     </div>
-
+    
 </body>
 
 </html>

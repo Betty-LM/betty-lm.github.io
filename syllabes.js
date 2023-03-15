@@ -2,7 +2,28 @@ const syllabe = {
 
     'a' : 'pro' ,
     'b' : 'tui',
-    'c' : 'nos'
-
-
+    'c' : 'nos',
+    'd' : 'bol',
+    'e' : 'fran',
+    'f' : 'cru',
+    'g': 'prin',
+    'h' : 'cho',
+    'i' : 'flam',
+    'j' : 'rou',
+    'k' : 'bla',
+    'l': 'roi',
+    'm' : 'wen',
+    'n' : 'ya',
+    'o' : 'api',
+    'p': 'dri',
+    'q' : 'clin',
+    'r' : 'zan',
+    's' : 'tri',
+    't' : 'fli',
+    'u' : 'mio',
+    'v' : 'jon',
+    'w' : 'bri',
+    'x': 'yzel',
+    'y': 'sou',
+    'z' : 'pier',
 }

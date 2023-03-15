@@ -107,3 +107,19 @@ section {
     padding: 2rem;
     border-radius: 5%;
 }
+
+.error{
+    
+    position : absolute;
+    top: 20rem;
+    left: auto;
+    width: 80%;
+    height:auto;
+    z-index: 2;
+    text-align: center;
+    justify-content: center;
+    background-color: aquamarine;
+    border: 1px black solid;
+    border-radius: 5%;
+
+}
