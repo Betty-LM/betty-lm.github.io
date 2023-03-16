@@ -25,4 +25,6 @@ const syllabeRandom = [
     'yzel',
     'sou',
     'pier',
+    'lou',
+
 ]

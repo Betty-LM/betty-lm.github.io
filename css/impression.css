@@ -19,6 +19,12 @@ button {
     display: none;
 }
 
+strong {
+
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 2rem;
+}
 .forPrint {
 
     display: flex;

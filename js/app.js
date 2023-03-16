@@ -101,13 +101,13 @@ const generateManager = {
         // On bloque l'envoi des données pour pouvoir les interpréter
         event.preventDefault();
 
-        // On crée aléatoirement un nouveau nom de poké en demandant un nombre d'index aléatoire entre 0 et 25 (=le nb d'entrées de mon tableau)
+        // On crée aléatoirement un nouveau nom de poké en demandant un nombre d'index aléatoire entre 0 et 26 (=le nb d'entrées de mon tableau)
 
-        const newRandomName = syllabeRandom[Math.floor(Math.random() * 25)] + syllabeRandom[Math.floor(Math.random() * 25)] + syllabeRandom[Math.floor(Math.random() * 25)];
+        const newRandomName = syllabeRandom[Math.floor(Math.random() * 26)] + syllabeRandom[Math.floor(Math.random() * 26)] + syllabeRandom[Math.floor(Math.random() * 25)];
 
         console.log(newRandomName)
 
-        const newRandomType = typeRandom[Math.floor(Math.random() * 11)];
+        const newRandomType = typeRandom[Math.floor(Math.random() * 15)];
 
         console.log(newRandomType)
         generateManager.displayResultName(newRandomName);

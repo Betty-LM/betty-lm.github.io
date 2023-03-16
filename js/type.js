@@ -1,6 +1,6 @@
 const type = {
 
-    'Janvier' : 'Glace', 
+    'Janvier' : 'Poison', 
     'Février' : 'Roche',
     'Mars' : 'Eau',
     'Avril' : 'Dragon',

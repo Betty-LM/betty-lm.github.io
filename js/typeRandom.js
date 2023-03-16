@@ -1,5 +1,5 @@
 const typeRandom = [
-    'Glace',
+    'Poison',
     'Roche',
     'Eau',
     'Dragon',
@@ -13,5 +13,8 @@ const typeRandom = [
     'Spectre', 
     'Vol',
     'Acier',
+    'Insecte',
+    'Glace',
+    'Normal',
     
 ]
