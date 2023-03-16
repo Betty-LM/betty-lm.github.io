@@ -1,0 +1,55 @@
+body {
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Outfit', sans-serif;
+}
+
+button {
+
+    display: none;
+}
+
+.contenair {
+
+    display : none;
+}
+
+.choice {
+
+    display: none;
+}
+
+.forPrint {
+
+    display: flex;
+    border: 1px black solid;
+    border-radius: 5%;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.borderPrint {
+
+    width: 50%;
+    border: 1px black solid;
+    border-radius: 5%;
+    height: 100%;
+    margin: 2rem;
+    justify-content: stretch;
+}
+
+.results {
+
+    width: 50%;
+    border: 1px black solid;
+    border-radius: 5%;
+    height: 100%;
+    justify-content: stretch;
+}
+
+@media print {
+   @page {
+    size: landscape;
+   }
+}

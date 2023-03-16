@@ -10,6 +10,27 @@ const generateManager = {
     },
 
 
+    /**
+     * Méthode qui initialise la page "d'accueil"
+     */
+    initGeneratorPage: function () {
+
+        // On remet à zéro la valeur des select
+        document.querySelector('#letter-firstname').value = "";
+
+        document.querySelector('#letter-lastname').value = "";
+
+        document.querySelector('#month').value = "";
+
+        // On retire la class hidden au contenair si elle existe
+        const contenairEl = document.querySelector('.contenair');
+        contenairEl.classList.remove('hidden');
+
+        // On replace la class hidden sur la div de resultats
+        const resultElement = document.querySelector('.results');
+        resultElement.classList.add('hidden');
+    },
+
     // Méthode qui attache des écouteurs d'évènements au submit des formulaires/ou clics des boutons
     addEvents: function () {
         // Pour le formulaire de choix
@@ -72,29 +93,45 @@ const generateManager = {
         generateManager.findType(month);
     },
 
+    /**
+     * Méthode qui s'exécute au submit du formuliare de hasard ; va générer un nom et un type
+     * @param {} event 
+     */
     handleSubmitRandom: function (event) {
         // On bloque l'envoi des données pour pouvoir les interpréter
         event.preventDefault();
 
         // On crée aléatoirement un nouveau nom de poké en demandant un nombre d'index aléatoire entre 0 et 25 (=le nb d'entrées de mon tableau)
 
-        const newRandomName = syllabeRandom[Math.floor(Math.random() * 25)] + syllabeRandom[Math.floor(Math.random() * 25)];
+        const newRandomName = syllabeRandom[Math.floor(Math.random() * 25)] + syllabeRandom[Math.floor(Math.random() * 25)] + syllabeRandom[Math.floor(Math.random() * 25)];
 
-        // console.log(newRandomName)
+        console.log(newRandomName)
 
         const newRandomType = typeRandom[Math.floor(Math.random() * 11)];
 
-        // console.log(newRandomType)
-        return newRandomName, newRandomType;
+        console.log(newRandomType)
+        generateManager.displayResultName(newRandomName);
+        generateManager.displayResultType(newRandomType);
+        // return newRandomName, newRandomType;
     },
 
 
+    /**
+     * Méthode qui s'execute au clic sur le(s) bouton(s) de retour
+     */
     handleClickBack: function () {
         // Au clic, on fait disparaitre la div error
         const errorElement = document.querySelector('.error');
         errorElement.setAttribute('hidden', '');
+
+        // Ou la div modal-dialog selon ce qui a été cliqué
+        const resultDiv = document.querySelector('.modal-dialog');
+        resultDiv.setAttribute('hidden', '');
     },
 
+    /**
+     * Méthode qui modifie l'aspect du bouton valider du form de lettres choisies au survol
+     */
     handleChangeContent: function () {
         // Au survol de l'élemnt on modifie son contenu
         document.querySelector('.validate').textContent = "Go !";
@@ -106,6 +143,9 @@ const generateManager = {
             1000)
     },
 
+    /**
+     * Méthode qui modifie l'aspect du bouton valider du form hasard au survol
+     */
     handleChangeContentRandom: function () {
 
         // Au survol de l'élement on modifie son contenu
@@ -117,22 +157,37 @@ const generateManager = {
             },
             1000)
     },
+
+
+    /**
+     * Méthode qui s'exécute au clic sur le bouton impression; ouvre la page d'impression
+     */
+    handleClickPrint: function () {
+        // Au clic on ouvre la page d'impression
+        window.print();
+
+    },
+
+    /**
+     * Méthode qui s'execute au clic du bouton retour sur la page de résultat
+     */
+    handleBackToHomePage: function () {
+
+        // On appelle la fonction qui affiche la page vierge
+        generateManager.initGeneratorPage();
+    },
+
     // ********************************************************************
     //              Méthodes relatives aux données reçues
     // ********************************************************************
 
-    findNewName: function (letterFirstName, letterLastName = "") {
+    /**
+     * Méthode qui génère un nom de pokemon en fonction des lettres sélectionnées par l'utilisateur
+     * @param {*} letterFirstName lettre qui correspond à la premiere lettre du prenom sélectionnée
+     * @param {*} letterLastName lettre qui correspond à la premiere lettre du nom sélectionnée
+     */
+    findNewName: function (letterFirstName, letterLastName) {
         // On récupère les lettres reçues de l'utilisateur et on les fait correspondre à une ligne du tableau des syllabes
-        // On vérifie que le select est renseigné
-        if (letterFirstName.length != 1) {
-
-            // On récupère la div de message d'erreur et on l'affiche
-            const errorElement = document.querySelector('.error');
-            // On la place en haut du DOM
-
-            errorElement.removeAttribute('hidden');
-            // console.log("Zut, tu n'as pas choisi de lettre!")
-        }
 
         const firstSyllabe = syllabe[letterFirstName];
 
@@ -149,6 +204,11 @@ const generateManager = {
         // return newName;
     },
 
+    /**
+     * Méthode qui fait correspondre un type au mois sélectionné par l'utilisateur
+     * @param {*} month Mois de naissance sélectionné par l'utilisateur
+     * @returns 
+     */
     findType: function (month) {
         // On récupère le mois envoyé en paramètre et on le fait correspondre à unb type du tableau type
         const yourType = type[month];
@@ -161,6 +221,10 @@ const generateManager = {
 
     },
 
+    /**
+     * Méthode qui affiche le résultat du nouveau nom
+     * @param {*} name le nom généré suite au choix de lettre ou de hasard
+     */
     displayResultName: function (name) {
 
         // On récupère la div à afficher dans le DOM qui contiendra nos résultats
@@ -172,17 +236,29 @@ const generateManager = {
         console.log(nameResult);
 
         // const nameUppercase = name[0].toUppercase() + name.substring(1);
-        nameResult.innerHTML = "Ton nom de Pokémon est : " + name;
+        nameResult.innerHTML = "Ton nom de Pokémon est : <strong>" + name + "</strong>";
 
         // On retire la class hidden de la div results et on l'ajoute au reste
         resultElement.classList.remove('hidden');
 
         // On récupere l'élément à cacher
-        const divToHide = document.querySelector('.wrapper');
+        const divToHide = document.querySelector('.contenair');
         divToHide.classList.add('hidden');
+        console.log(divToHide)
+        // resultElement.classList.add('hidden');
+        // On récupère les boutons print et back et on leur attache un écouteur d'évènement
+        const printButton = document.querySelector('.print');
+        printButton.addEventListener('click', generateManager.handleClickPrint);
+
+        const backHomeButton = document.querySelector('.backToHome');
+        backHomeButton.addEventListener('click', generateManager.handleBackToHomePage);
 
     },
 
+    /**
+     * Méthode qui affiche le résultat du nouveau type
+     * @param {*} type le type généré suite au choix de lettre ou de hasard
+     */
     displayResultType: function (type) {
 
         // On récupère la div à afficher dans le DOM qui contiendra nos résultats
@@ -193,17 +269,18 @@ const generateManager = {
         const typeResult = document.querySelector('.results .type');
         console.log(typeResult);
 
-        typeResult.innerHTML = "Ton Pokémon est de type : " + type;
+        typeResult.innerHTML = "Ton Pokémon est de type : <strong>" + type + "</strong>";
 
         // On retire la class hidden de la div results et on l'ajoute au reste
-        resultElement.classList.toggle('hidden');
+        resultElement.classList.remove('hidden');
 
         // On récupere les éléments à cacher
         const divToHide = document.querySelector('.contenair');
         divToHide.classList.add('hidden');
 
-    }
+        //  resultElement.classList.add('hidden');
 
+    }
 
 
 }

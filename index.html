@@ -10,13 +10,15 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;400&family=Outfit:wght@400;700&display=swap"
         rel="stylesheet">
-        <link rel="shortcut icon" href="images/Bookmark_icon-icons.com_67583.png">
-    <link rel="stylesheet" href="style.css">
-    <script src="app.js" defer ></script>
-    <script src="syllabes.js" defer ></script>
-    <script src="syllabeRandom.js" defer ></script>
-    <script src="type.js" defer ></script>
-    <script src="typeRandom.js" defer ></script>
+    <link rel="shortcut icon" href="images/Bookmark_icon-icons.com_67583.png">
+    
+    <link rel="stylesheet" href="css/style.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/impression.css" media="print">
+    <script src="js/app.js" defer></script>
+    <script src="js/syllabes.js" defer></script>
+    <script src="js/syllabeRandom.js" defer></script>
+    <script src="js/type.js" defer></script>
+    <script src="js/typeRandom.js" defer></script>
 
     <title>Générateur de noms de ... POKEMONS !</title>
 </head>
@@ -25,148 +27,160 @@
     <main>
 
         <div class="contenair">
-        <h1>
-            <span><img src="images/pokemon-ge0ea4a705_1280.png" alt="pokéball"></span>  Découvre ton nom de Pokémon !  
-            <span><img src="images/pokemon-ge0ea4a705_1280.png" alt="pokéball"></span>
-        </h1>
+            <h1>
+                <span><img src="images/pokemon-ge0ea4a705_1280.png" alt="pokéball"></span> Découvre ton nom de Pokémon !
+                <span><img src="images/pokemon-ge0ea4a705_1280.png" alt="pokéball"></span>
+            </h1>
 
 
-        <section class="intro">
-            <p>Tu organises une fête avec tes amis?</p>
-            <p> Ou tu aimes juste t'amuser avec le monde des Pokémon? 
-            </p>
-            <p>
-                Alors amuse toi à créer de nouveaux noms de pokémons !!
-            </p>
-            <p>
-                Une fois ton nom et ton type trouvé, tu peux par exemple t'amuser à dessiner ce nouveau compagnon !! 
-            </p>
-        </section>
-
-        
-
-        <div class="wrapper">
-
-            <section class="right">
-                <h2>Trouve ton nom de pokémon grâce aux lettres de ton prénom et de ton nom ! </h2>
-                <div class="form">
-                    <div role="dialog" aria-modal="true" aria-labelledby="modal-heading" class="error" hidden>
-                        <p>Oups ! Tu n'as pas choisi ta lettre...</p>
-                        <button class="back">Retour</button>
-                    </div>
-
-                    <form action="" method="post" class="choice-form">
-                        
-                        <!-- question 1ere lettre select-->
-                        <label for="Première lettre de ton prénom">Sélectionne la première lettre de ton prénom</label>
-                        <select name="Première lettre de ton prénom" id="letter-firstname">
-                            <option value="">Ton prénom commence par...</option>
-                            <option value="a">A</option>
-                            <option value="b">B</option>
-                            <option value="c">C</option>
-                            <option value="d">D</option>
-                            <option value="e">E</option>
-                            <option value="f">F</option>
-                            <option value="g">G</option>
-                            <option value="h">H</option>
-                            <option value="i">I</option>
-                            <option value="j">J</option>
-                            <option value="k">K</option>
-                            <option value="l">L</option>
-                            <option value="m">M</option>
-                            <option value="n">N</option>
-                            <option value="o">O</option>
-                            <option value="p">P</option>
-                            <option value="q">Q</option>
-                            <option value="r">R</option>
-                            <option value="s">S</option>
-                            <option value="t">T</option>
-                            <option value="u">U</option>
-                            <option value="v">V</option>
-                            <option value="w">W</option>
-                            <option value="x">X</option>
-                            <option value="y">Y</option>
-                            <option value="z">Z</option>
-                        </select>
-                       
-                        <!-- question 1ere lettre nom select -->
-                        <label for="Première lettre de ton nom">Sélectionne la première lettre de ton nom</label>
-                        <select name="Première lettre de ton nom" id="letter-lastname">
-                            <option value="">Ton nom commence par...</option>
-                            <option value="a">A</option>
-                            <option value="b">B</option>
-                            <option value="c">C</option>
-                            <option value="d">D</option>
-                            <option value="e">E</option>
-                            <option value="f">F</option>
-                            <option value="g">G</option>
-                            <option value="h">H</option>
-                            <option value="i">I</option>
-                            <option value="j">J</option>
-                            <option value="k">K</option>
-                            <option value="l">L</option>
-                            <option value="m">M</option>
-                            <option value="n">N</option>
-                            <option value="o">O</option>
-                            <option value="p">P</option>
-                            <option value="q">Q</option>
-                            <option value="r">R</option>
-                            <option value="s">S</option>
-                            <option value="t">T</option>
-                            <option value="u">U</option>
-                            <option value="v">V</option>
-                            <option value="w">W</option>
-                            <option value="x">X</option>
-                            <option value="y">Y</option>
-                            <option value="z">Z</option>
-                        </select>
-
-                        <!-- question mois select-->
-                        <label for="Ton mois d'anniversaire">Sélectionne le mois de ton anniversaire</label>
-                        <select name="Ton mois d'anniversaire" id="month">
-                            <option value="">Ton anniversaire est au mois de...</option>
-                            <option value="Janvier">Janvier</option>
-                            <option value="Février">Février</option>
-                            <option value="Mars">Mars</option>
-                            <option value="Avril">Avril</option>
-                            <option value="Mai">Mai</option>
-                            <option value="Juin">Juin</option>
-                            <option value="Juillet">Juillet</option>
-                            <option value="Août">Août</option>
-                            <option value="Septembre">Septembre</option>
-                            <option value="Octobre">Octobre</option>
-                            <option value="Novembre">Novembre</option>
-                            <option value="Décembre">Décembre</option>
-                        </select>
-                        
-                        <button class="validate">Générer</button>
-                    </form>
-                </div>
-            </section>
-
-            <section class="left">
-                <h2>Ou laisse le hasard choisir pou toi ! </h2>
-                <p>
-                    Un nom et un type de pokémon seront automatiquement créés !
+            <section class="intro">
+                <p>Tu organises une fête avec tes amis?</p>
+                <p> Ou tu aimes juste t'amuser avec le monde des Pokémon?
                 </p>
-                <form action="" method="post" class="random-form">
-
-                    <button class="randomValidate">Laisser le hasard décider</button>
-                </form>
+                <p>
+                    Alors amuse toi à créer de nouveaux noms de pokémons !!
+                </p>
+                <p>
+                    Une fois ton nom et ton type trouvé, tu peux par exemple t'amuser à dessiner ce nouveau compagnon !!
+                </p>
             </section>
 
 
+
+            <div class="wrapper">
+
+                <section class="right">
+                    <h2>Trouve ton nom de pokémon grâce aux lettres de ton prénom et de ton nom ! </h2>
+                    <div class="form">
+                        <div role="dialog" aria-modal="true" aria-labelledby="modal-heading" class="error" hidden>
+                            <p>Oups ! Tu n'as pas choisi ta lettre...</p>
+                            <button class="back">Retour</button>
+                        </div>
+
+                        <form action="" method="" class="choice-form">
+
+                            <span id="errorFirstName"></span>
+                            <!-- question 1ere lettre select-->
+                            <label for="Première lettre de ton prénom">Sélectionne la première lettre de ton
+                                prénom</label>
+                            <select name="Première lettre de ton prénom" id="letter-firstname">
+                                <option value="">Ton prénom commence par...</option>
+                                <option value="a">A</option>
+                                <option value="b">B</option>
+                                <option value="c">C</option>
+                                <option value="d">D</option>
+                                <option value="e">E</option>
+                                <option value="f">F</option>
+                                <option value="g">G</option>
+                                <option value="h">H</option>
+                                <option value="i">I</option>
+                                <option value="j">J</option>
+                                <option value="k">K</option>
+                                <option value="l">L</option>
+                                <option value="m">M</option>
+                                <option value="n">N</option>
+                                <option value="o">O</option>
+                                <option value="p">P</option>
+                                <option value="q">Q</option>
+                                <option value="r">R</option>
+                                <option value="s">S</option>
+                                <option value="t">T</option>
+                                <option value="u">U</option>
+                                <option value="v">V</option>
+                                <option value="w">W</option>
+                                <option value="x">X</option>
+                                <option value="y">Y</option>
+                                <option value="z">Z</option>
+                            </select>
+
+                            
+                            <span id="errorLastName"></span>
+                            <!-- question 1ere lettre nom select -->
+                            <label for="Première lettre de ton nom">Sélectionne la première lettre de ton nom</label>
+                            <select name="Première lettre de ton nom" id="letter-lastname">
+                                <option value="">Ton nom commence par...</option>
+                                <option value="a">A</option>
+                                <option value="b">B</option>
+                                <option value="c">C</option>
+                                <option value="d">D</option>
+                                <option value="e">E</option>
+                                <option value="f">F</option>
+                                <option value="g">G</option>
+                                <option value="h">H</option>
+                                <option value="i">I</option>
+                                <option value="j">J</option>
+                                <option value="k">K</option>
+                                <option value="l">L</option>
+                                <option value="m">M</option>
+                                <option value="n">N</option>
+                                <option value="o">O</option>
+                                <option value="p">P</option>
+                                <option value="q">Q</option>
+                                <option value="r">R</option>
+                                <option value="s">S</option>
+                                <option value="t">T</option>
+                                <option value="u">U</option>
+                                <option value="v">V</option>
+                                <option value="w">W</option>
+                                <option value="x">X</option>
+                                <option value="y">Y</option>
+                                <option value="z">Z</option>
+                            </select>
+
+                            <span id="errorMonth"></span>
+                            <!-- question mois select-->
+                            <label for="Ton mois d'anniversaire">Sélectionne le mois de ton anniversaire</label>
+                            <select name="Ton mois d'anniversaire" id="month">
+                                <option value="">Ton anniversaire est au mois de...</option>
+                                <option value="Janvier">Janvier</option>
+                                <option value="Février">Février</option>
+                                <option value="Mars">Mars</option>
+                                <option value="Avril">Avril</option>
+                                <option value="Mai">Mai</option>
+                                <option value="Juin">Juin</option>
+                                <option value="Juillet">Juillet</option>
+                                <option value="Août">Août</option>
+                                <option value="Septembre">Septembre</option>
+                                <option value="Octobre">Octobre</option>
+                                <option value="Novembre">Novembre</option>
+                                <option value="Décembre">Décembre</option>
+                            </select>
+
+                            <button class="validate">Générer</button>
+                        </form>
+                    </div>
+                </section>
+
+                <section class="left">
+                    <h2>Ou laisse le hasard choisir pou toi ! </h2>
+                    <p>
+                        Un nom et un type de pokémon seront automatiquement créés !
+                    </p>
+                    <form action="" method="" class="random-form">
+
+                        <button class="randomValidate">Laisser le hasard décider</button>
+                    </form>
+                </section>
+
+
+            </div>
         </div>
+        <div class="forPrint">
+        <div class="borderPrint"></div>
+
+        <div class="results hidden">
+            <h1>Voilà un nouveau Pokémon !</h1>
+            <p class="name"></p>
+            <p class="type"></p>
+            <p class="choice">Si tu veux, amuse toi maintenant à le dessiner comme tu l'imagines ! </p>
+            <button class="print">Imprimer ma page de pokédex</button>
+            <p class="choice">Tu peux aussi essayer d'en inventer d'autres pour créer ton équipe !</p>
+            <button class="backToHome">Retour à la page de noms de Pokémon</button>
+        </div>
+
     </div>
     </main>
 
-
-    <div class="results hidden">
-        <h1></h1>
-        <p class="name"></p>
-        <p class="type"></p>
-    </div>
-    
 </body>
 
 </html>

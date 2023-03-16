@@ -10,5 +10,8 @@ const typeRandom = [
     'Electrique',
     'Combat',
     'Psy',
-    'Spectre'
+    'Spectre', 
+    'Vol',
+    'Acier',
+    
 ]
