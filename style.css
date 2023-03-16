@@ -43,21 +43,23 @@ select {
 
 button {
     margin-top: 10px;
-    width: 25%;
-    height: 1.5rem;
+    /* width: auto; */
+    height: auto;
     border-radius: 2rem;
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
     font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
     transition: all 0.2s;
-    color: palevioletred;
-    background-color: greenyellow;
+    color: rgb(0, 0, 0);
+    background-color: rgb(228 31 37);
     width: 80%;
 }
 
 button:hover {
     border: 1px solid white;
-    background-color: blueviolet;
+    background-color: rgb(22, 124, 9);
+
 }
 
 h1 {
@@ -70,6 +72,16 @@ h1 {
 
 img {
     width: 2rem;
+}
+
+.logo {
+
+    width: 9rem;
+
+}
+
+p {
+    margin: 1rem;
 }
 .hidden {
 
@@ -105,8 +117,9 @@ img {
 }
 
 section {
+    font-size: 1.5rem;
     text-align: center;
-    background-color: rgb(240, 11, 11, 0.2);
+    background-color: rgba(220, 240, 232, 0.2);
     display: flex;
     flex-flow: column wrap;
     justify-content: space-around;
@@ -118,18 +131,35 @@ section {
     border-radius: 5%;
 }
 
+
+.intro {
+    width: auto;
+    color: rgb(8, 8, 8);
+}
+
 .error{
     
-    position : absolute;
-    top: 20rem;
-    left: auto;
+    position :absolute;
     width: 80%;
-    height:auto;
-    z-index: 2;
     text-align: center;
     justify-content: center;
-    background-color: aquamarine;
-    border: 1px black solid;
+    background-color: rgb(231, 123, 21, 0.9);
+    border: 1px;
     border-radius: 5%;
 
+}
+
+.results {
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: rgba(220, 240, 232, 0.2);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    border: 1.3rem solid;
+    border-image-source: url(images/pokemon-ge0ea4a705_1280.png);
+    width: auto;
+    margin: 3rem;
+    padding: 2rem;
+    border-radius: 5%;
 }

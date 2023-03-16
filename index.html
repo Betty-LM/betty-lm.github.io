@@ -10,7 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;400&family=Outfit:wght@400;700&display=swap"
         rel="stylesheet">
-        <link rel="shortcut icon" href="images/pokemon-g6e180dc65_1280.png">
+        <link rel="shortcut icon" href="images/Bookmark_icon-icons.com_67583.png">
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer ></script>
     <script src="syllabes.js" defer ></script>
@@ -23,22 +23,40 @@
 
 <body>
     <main>
+
         <div class="contenair">
-        <h1><img src="images/pokemon-ge0ea4a705_1280.png" >  Découvre ton nom de Pokémon !  <img src="images/pokemon-ge0ea4a705_1280.png" ></h1>
+        <h1>
+            <span><img src="images/pokemon-ge0ea4a705_1280.png" alt="pokéball"></span>  Découvre ton nom de Pokémon !  
+            <span><img src="images/pokemon-ge0ea4a705_1280.png" alt="pokéball"></span>
+        </h1>
 
 
-        <div role="dialog" aria-modal="true" aria-labelledby="modal-heading" class="error" hidden>
-            <h1></h1>
-            <p>Zut ! Tu n'as pas choisi de lettre...</p>
-            <button class="back">Retour</button>
-        </div>
+        <section class="intro">
+            <p>Tu organises une fête avec tes amis?</p>
+            <p> Ou tu aimes juste t'amuser avec le monde des Pokémon? 
+            </p>
+            <p>
+                Alors amuse toi à créer de nouveaux noms de pokémons !!
+            </p>
+            <p>
+                Une fois ton nom et ton type trouvé, tu peux par exemple t'amuser à dessiner ce nouveau compagnon !! 
+            </p>
+        </section>
+
+        
 
         <div class="wrapper">
 
-            <section class="right">PARTIE DROITE
-                <h2>Accroche</h2>
+            <section class="right">
+                <h2>Trouve ton nom de pokémon grâce aux lettres de ton prénom et de ton nom ! </h2>
                 <div class="form">
+                    <div role="dialog" aria-modal="true" aria-labelledby="modal-heading" class="error" hidden>
+                        <p>Oups ! Tu n'as pas choisi ta lettre...</p>
+                        <button class="back">Retour</button>
+                    </div>
+
                     <form action="" method="post" class="choice-form">
+                        
                         <!-- question 1ere lettre select-->
                         <label for="Première lettre de ton prénom">Sélectionne la première lettre de ton prénom</label>
                         <select name="Première lettre de ton prénom" id="letter-firstname">
@@ -121,18 +139,19 @@
                             <option value="Décembre">Décembre</option>
                         </select>
                         
-                        <button>Générer</button>
+                        <button class="validate">Générer</button>
                     </form>
                 </div>
             </section>
 
-            <section class="left">PARTIE GAUCHE
-                <h2>Accroche</h2>
+            <section class="left">
+                <h2>Ou laisse le hasard choisir pou toi ! </h2>
+                <p>
+                    Un nom et un type de pokémon seront automatiquement créés !
+                </p>
                 <form action="" method="post" class="random-form">
 
-                    <p>Laisser le hasard</p>
-
-                    <button>Générer</button>
+                    <button class="randomValidate">Laisser le hasard décider</button>
                 </form>
             </section>
 
@@ -142,11 +161,10 @@
     </main>
 
 
-    <div class="hidden">
-        <section>
+    <div class="results hidden">
         <h1></h1>
-        <p>Result quand form soumis</p>
-    </section>
+        <p class="name"></p>
+        <p class="type"></p>
     </div>
     
 </body>
