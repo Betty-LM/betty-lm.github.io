@@ -4,6 +4,7 @@ body {
     font-family: 'Outfit', sans-serif;
     background-image: url(images/pokemon-g6e180dc65_1280.png);
     background-position: center;
+    background-size: cover;
 }
 
 .contenair {
@@ -15,6 +16,8 @@ body {
     padding: 2rem;
     overflow: hidden;
     text-align: center;
+    border-image: url(images/pokemon-ge0ea4a705_1280.png);
+    border-image-repeat: space;
 }
 
 .wrapper {
@@ -58,11 +61,16 @@ button:hover {
 }
 
 h1 {
+    padding: 2rem;
+    border: 0.1rem solid white;
+    border-radius: 10%;
     text-align: center;
-    color: aquamarine;
+    color: rgb(255, 252, 250);
 }
 
-
+img {
+    width: 2rem;
+}
 .hidden {
 
     display: none;
@@ -98,11 +106,12 @@ h1 {
 
 section {
     text-align: center;
-    background-color: aquamarine;
+    background-color: rgb(240, 11, 11, 0.2);
     display: flex;
     flex-flow: column wrap;
     justify-content: space-around;
-    border: 1px black solid;
+    border: 1.3rem solid;
+    border-image-source: url(images/pokemon-ge0ea4a705_1280.png);
     width: 50%;
     margin: 3rem;
     padding: 2rem;
