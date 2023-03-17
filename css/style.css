@@ -7,6 +7,14 @@ body {
     background-size: cover;
 }
 
+/* @media screen and (max-width : 800px) {
+
+    body {
+        background-image: url(../images/pokemon-g6e180dc65_1280.png);
+        background-size: cover;
+    }
+} */
+
 .contenair {
     width: 80%;
     border: 1px black solid;
@@ -19,9 +27,29 @@ body {
     border-image-repeat: space;
 }
 
+@media screen and (max-width : 800px) {
+
+    .contenair {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
 .wrapper {
     display: flex;
 
+}
+
+@media screen and (max-width : 800px) {
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
 }
 
 .form {
@@ -55,9 +83,17 @@ button {
     width: 80%;
 }
 
+@media screen and (max-width : 800px) {
+    button {
+        font-size: 1rem;
+        width: auto;
+        height: auto;
+    }
+}
+
 button:hover {
     border: 1px solid white;
-    background-color: rgb(22, 124, 9);
+    background-color: rgb(186, 189, 11);
 
 }
 
@@ -68,6 +104,13 @@ h1 {
     text-align: center;
     color: rgb(255, 252, 250);
 }
+
+@media screen and (max-width : 800px) {
+    h2 {
+        font-size: 1.2rem;
+    }
+}
+
 
 .results h1 {
     color: black;
@@ -97,39 +140,18 @@ strong {
 
 .hidden {
 
-    display : none
+    display: none
 }
+
 .results.hidden {
 
     display: none;
 }
 
-.display{
+.display {
 
     z-index: 2;
     width: auto;
-}
-
-@media screen and (max-width : 800px) {
-    .wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .contenair{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-    
-    section {
-        width: 100%;
-        font-size: 1.5rem;
-    }
-
-    h1 {
-        font-size: 3rem;
-    }
 }
 
 section {
@@ -147,14 +169,45 @@ section {
     border-radius: 5%;
 }
 
+@media screen and (max-width : 800px) {
+
+    section {
+        width: 100%;
+        font-size: 1rem;
+        display: block;
+    }
+}
+
 .intro {
     width: auto;
     color: rgb(8, 8, 8);
 }
 
-.error{
-    
-    position :absolute;
+@media screen and (max-width : 800px) {
+
+    .intro {
+        display: none;
+    }
+}
+
+.mobile {
+
+    display: none;
+}
+
+@media screen and (max-width : 800px) {
+
+    .mobile {
+        display: block;
+        width: 100%;
+        font-size: 1.5rem;
+        height: auto;
+    }
+}
+
+.error {
+
+    position: absolute;
     width: 80%;
     text-align: center;
     justify-content: center;
@@ -180,4 +233,20 @@ section {
     margin: 3rem;
     padding: 2rem;
     border-radius: 5%;
+}
+
+@media screen and (max-width : 800px) {
+    .forPrint {
+
+        display: flex;
+        width: 100%;
+        justify-content: baseline;
+    }
+
+    .results {
+        display: block;
+        width: auto;
+        font-size: 1.5rem;
+        height: auto;
+    }
 }

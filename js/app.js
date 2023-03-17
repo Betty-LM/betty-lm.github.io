@@ -138,7 +138,7 @@ const generateManager = {
 
         //    On réinitialise la valeur après quelques instants
         setTimeout(function () {
-                document.querySelector('.validate').textContent = "Générer"
+                document.querySelector('.validate').textContent = "Trouver ton nom !"
             },
             1000)
     },
