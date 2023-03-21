@@ -125,7 +125,7 @@ const generateManager = {
     /**
      * Méthode qui modifie l'aspect du bouton valider du form hasard au survol
      */
-     handleMouseOverRandom: function () {
+    handleMouseOverRandom: function () {
 
         // Au survol de l'élement on modifie son contenu
         document.querySelector('.randomValidate').textContent = '"La création a toujours besoin de hasard"';
