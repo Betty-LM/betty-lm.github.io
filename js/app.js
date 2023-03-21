@@ -48,12 +48,12 @@ const generateManager = {
         // Par les lettres choisies
         const validateButton = document.querySelector('.validate');
         // On lui attache un écouteur d'évènement au survol
-        validateButton.addEventListener('mouseover', generateManager.handleChangeContent);
+        validateButton.addEventListener('mouseover', generateManager.handleMouseOver);
 
         // Par le hasard
         const randomValidateButton = document.querySelector('.randomValidate');
         // On lui attache un écouteur d'évènement au survol
-        randomValidateButton.addEventListener('mouseover', generateManager.handleChangeContentRandom);
+        randomValidateButton.addEventListener('mouseover', generateManager.handleMouseOverRandom);
     },
 
 
@@ -111,30 +111,30 @@ const generateManager = {
     /**
      * Méthode qui modifie l'aspect du bouton valider du form de lettres choisies au survol
      */
-    handleChangeContent: function () {
+     handleMouseOver: function () {
         // Au survol de l'élemnt on modifie son contenu
-        document.querySelector('.validate').textContent = "Go !";
+        document.querySelector('.validate').textContent = "On y va !";
 
         //    On réinitialise la valeur après quelques instants
         setTimeout(function () {
-                document.querySelector('.validate').textContent = "Trouver ton nom !"
+                document.querySelector('.validate').textContent = "Découvrir ton nom"
             },
-            1000)
+            800)
     },
 
     /**
      * Méthode qui modifie l'aspect du bouton valider du form hasard au survol
      */
-    handleChangeContentRandom: function () {
+     handleMouseOverRandom: function () {
 
         // Au survol de l'élement on modifie son contenu
-        document.querySelector('.randomValidate').textContent = "Ah tu es joueur :)";
+        document.querySelector('.randomValidate').textContent = '"La création a toujours besoin de hasard"';
 
         //    On réinitialise la valeur après quelques instants
         setTimeout(function () {
                 document.querySelector('.randomValidate').textContent = "Laisser le hasard décider"
             },
-            1000)
+            900)
     },
 
 
