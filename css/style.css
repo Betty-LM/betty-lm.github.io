@@ -29,6 +29,11 @@
     padding: 1.2rem;
 }
 
+.results h1 {
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+}
 .hidden {
 
     display: none;
@@ -43,9 +48,10 @@
 
 .right,
 .left {
-
+    text-align: center;
     width: 100%;
 }
+
 @media screen and (min-width : 800px) {
 
     .wrapper {
@@ -68,11 +74,19 @@ h2 {
 }
 
 h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2rem;
     width: 100%;
     display: flex;
     justify-content: space-around;
     border: 1px solid crimson;
     border-radius: 8%;
+}
+
+.pika {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
 }
 
 form h2 {
@@ -81,6 +95,9 @@ form h2 {
 
 button {
     width: 100%;
+    /* font-family: 'VT323', monospace; */
+    font-size: 1.2rem;
+
 }
 
 button:hover {
