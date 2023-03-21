@@ -13,7 +13,6 @@
 
 }
 
-
 .animate__animated.animate__rotateIn {
 
     --animation-duration: 4s;
@@ -29,11 +28,27 @@
     padding: 1.2rem;
 }
 
+.results {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.results p {
+
+    display: block;
+}
+
 .results h1 {
     height: 3rem;
     justify-content: center;
     align-items: center;
+    font-size: 0.8rem;
+
 }
+
 .hidden {
 
     display: none;
@@ -67,26 +82,70 @@
 
 form,
 button,
-h1,
 h2 {
     text-align: center;
-    margin: 0.5rem;
+    margin: auto;
+    line-height: 2;
 }
 
 h1 {
+    text-align: center;
     font-family: 'Press Start 2P', cursive;
+    color: rgb(0, 0, 0);
     font-size: 1.2rem;
     width: 100%;
     display: flex;
     justify-content: space-around;
-    border: 1px solid crimson;
-    border-radius: 8%;
+    border: 1px dashed rgb(218, 54, 49);
+    border-radius: 2rem;
+}
+
+h2,
+strong {
+    color: rgb(218, 54, 49);
 }
 
 .pika {
     width: 15rem;
     height: 15rem;
     border-radius: 50%;
+    margin-top: 2rem;
+}
+
+.crayons,
+.groupe {
+    margin: auto;
+    text-align: center;
+    width: auto;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+@media screen and (min-width : 630px) {
+
+    .div-crayons,
+    .div-groupe,
+    .results p {
+        text-align: center;
+    }
+
+    .crayons,
+    .groupe {
+        height: 10rem;
+        width: auto;
+    }
+
+    .results.hidden {
+        display: none;
+    }
+
+    .results {
+        display: block;
+    }
+
+    .results h1 {
+        font-size: 1.2rem;
+    }
 }
 
 form h2 {
@@ -95,14 +154,15 @@ form h2 {
 
 button {
     width: 100%;
-    /* font-family: 'VT323', monospace; */
     font-size: 1.2rem;
-
+    border-radius: 2rem;
+    margin-top: 2rem;
 }
+
 
 button:hover {
     border: 1px solid white;
-    background-color: rgb(186, 189, 11);
+    background-color: rgb(218, 54, 49);
 
 }
 
@@ -114,6 +174,10 @@ select {
     width: 100%;
     margin: 0.5rem;
     text-align: center;
+    border-radius: 2rem;
+    height: 2rem;
+    background-color: white;
+    padding-left: 1rem;
 
 }
 
@@ -125,5 +189,5 @@ strong {
 
     text-transform: capitalize;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
