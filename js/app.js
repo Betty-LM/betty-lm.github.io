@@ -44,11 +44,6 @@ const generateManager = {
         // On lui attache les écouteurs au submit
         randomForm.addEventListener('submit', generateManager.handleSubmitRandom);
 
-        // Pour le bouton de retour de 'error'
-        const backButton = document.querySelector('.back');
-        // On lui attache l'écouteur d'évènements au clic
-        backButton.addEventListener('click', generateManager.handleClickBack)
-
         // Pour les boutons de validation
         // Par les lettres choisies
         const validateButton = document.querySelector('.validate');
@@ -76,9 +71,7 @@ const generateManager = {
 
         // On récupère la valeur des select
         const letterFirstName = document.querySelector('#letter-firstname').value;
-
-
-        console.log(letterFirstName)
+        // console.log(typeof(letterFirstName))
 
         const letterLastName = document.querySelector('#letter-lastname').value;
         console.log(letterLastName);
@@ -113,20 +106,6 @@ const generateManager = {
         generateManager.displayResultName(newRandomName);
         generateManager.displayResultType(newRandomType);
         // return newRandomName, newRandomType;
-    },
-
-
-    /**
-     * Méthode qui s'execute au clic sur le(s) bouton(s) de retour
-     */
-    handleClickBack: function () {
-        // Au clic, on fait disparaitre la div error
-        const errorElement = document.querySelector('.error');
-        errorElement.setAttribute('hidden', '');
-
-        // Ou la div modal-dialog selon ce qui a été cliqué
-        const resultDiv = document.querySelector('.modal-dialog');
-        resultDiv.setAttribute('hidden', '');
     },
 
     /**

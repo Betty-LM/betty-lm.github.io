@@ -5,15 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;400&family=Outfit:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="shortcut icon" href="images/Bookmark_icon-icons.com_67583.png">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="css/style.css" media="screen">
     <link rel="stylesheet" type="text/css" href="css/impression.css" media="print">
+
     <script src="js/app.js" defer></script>
     <script src="js/syllabes.js" defer></script>
     <script src="js/syllabeRandom.js" defer></script>
@@ -28,8 +30,10 @@
 
         <div class="contenair">
             <h1>
-                <span><img src="images/pokemon-ge0ea4a705_1280.png" alt="pokéball"></span> Découvre ton nom de Pokémon !
-                <span><img src="images/pokemon-ge0ea4a705_1280.png" alt="pokéball"></span>
+                <span><img class="animate__animated animate__rotateIn" src="images/pokemon-ge0ea4a705_1280.png"
+                        alt="pokéball"></span> Découvre ton nom de Pokémon !
+                <span><img class="animate__animated animate__rotateIn" src="images/pokemon-ge0ea4a705_1280.png"
+                        alt="pokéball"></span>
             </h1>
 
 
@@ -45,29 +49,23 @@
                 </p>
             </section>
 
-            <section class="mobile">
-                <p>
-                    Amuse toi à créer de nouveaux noms de Pokémon !
-                </p>
-            </section>
-
             <div class="wrapper">
 
                 <section class="right">
                     <h2>Trouve ton nom de pokémon grâce aux lettres de ton prénom et de ton nom ! </h2>
                     <div class="form">
-                        <div role="dialog" aria-modal="true" aria-labelledby="modal-heading" class="error" hidden>
+                        <!-- <div role="dialog" aria-modal="true" aria-labelledby="modal-heading" class="error" hidden>
                             <p>Oups ! Tu n'as pas choisi ta lettre...</p>
                             <button class="back">Retour</button>
-                        </div>
+                        </div> -->
 
-                        <form action="" method="" class="choice-form">
+                        <form action="" method="" class="choice-form needs-validation novalidate">
 
-                            <span id="errorFirstName"></span>
+
                             <!-- question 1ere lettre select-->
                             <label for="Première lettre de ton prénom">Sélectionne la première lettre de ton
                                 prénom</label>
-                            <select name="Première lettre de ton prénom" id="letter-firstname">
+                            <select name="Première lettre de ton prénom" id="letter-firstname" required>
                                 <option value="">Ton prénom commence par...</option>
                                 <option value="a">A</option>
                                 <option value="b">B</option>
@@ -98,10 +96,10 @@
                             </select>
 
 
-                            <span id="errorLastName"></span>
+
                             <!-- question 1ere lettre nom select -->
                             <label for="Première lettre de ton nom">Sélectionne la première lettre de ton nom</label>
-                            <select name="Première lettre de ton nom" id="letter-lastname">
+                            <select name="Première lettre de ton nom" id="letter-lastname" required>
                                 <option value="">Ton nom commence par...</option>
                                 <option value="a">A</option>
                                 <option value="b">B</option>
@@ -131,10 +129,10 @@
                                 <option value="z">Z</option>
                             </select>
 
-                            <span id="errorMonth"></span>
+
                             <!-- question mois select-->
                             <label for="Ton mois d'anniversaire">Sélectionne le mois de ton anniversaire</label>
-                            <select name="Ton mois d'anniversaire" id="month">
+                            <select name="Ton mois d'anniversaire" id="month" required>
                                 <option value="">Ton anniversaire est au mois de...</option>
                                 <option value="Janvier">Janvier</option>
                                 <option value="Février">Février</option>
