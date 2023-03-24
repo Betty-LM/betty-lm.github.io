@@ -4,7 +4,7 @@ const generateManager = {
 
     // Initialisation
     init: function () {
-        console.log("C'est parti!");
+        // console.log("C'est parti!");
 
         generateManager.addEvents();
     },
@@ -74,10 +74,10 @@ const generateManager = {
         // console.log(typeof(letterFirstName))
 
         const letterLastName = document.querySelector('#letter-lastname').value;
-        console.log(letterLastName);
+        // console.log(letterLastName);
 
         const month = document.querySelector('#month').value;
-        console.log(month);
+        // console.log(month);
 
         // On appelle la méthode findNewName qui va faire correspondre une lettre à une syllabe et on lui passe en arguments les lettres
         generateManager.findNewName(letterFirstName, letterLastName);
@@ -98,11 +98,11 @@ const generateManager = {
 
         const newRandomName = syllabeRandom[Math.floor(Math.random() * 26)] + syllabeRandom[Math.floor(Math.random() * 26)] + syllabeRandom[Math.floor(Math.random() * 25)];
 
-        console.log(newRandomName)
+        // console.log(newRandomName)
 
         const newRandomType = typeRandom[Math.floor(Math.random() * 15)];
 
-        console.log(newRandomType)
+        // console.log(newRandomType)
         generateManager.displayResultName(newRandomName);
         generateManager.displayResultType(newRandomType);
         // return newRandomName, newRandomType;
@@ -178,7 +178,7 @@ const generateManager = {
         generateManager.displayResultName(newName);
 
 
-        console.log("Ton nouveau nom de pokémon est " + newName);
+        // console.log("Ton nouveau nom de pokémon est " + newName);
 
         // return newName;
     },
@@ -192,7 +192,7 @@ const generateManager = {
         // On récupère le mois envoyé en paramètre et on le fait correspondre à unb type du tableau type
         const yourType = type[month];
 
-        console.log("Ton pokémon est de type " + yourType)
+        // console.log("Ton pokémon est de type " + yourType)
         // On appelle la méthode permettant d'afficger le résultat
         generateManager.displayResultType(yourType);
 
@@ -208,11 +208,11 @@ const generateManager = {
 
         // On récupère la div à afficher dans le DOM qui contiendra nos résultats
         const resultElement = document.querySelector('.results');
-        console.log(resultElement);
+        // console.log(resultElement);
 
         // On renseigne les champs voulus
         const nameResult = document.querySelector('.results .name');
-        console.log(nameResult);
+        // console.log(nameResult);
 
         // const nameUppercase = name[0].toUppercase() + name.substring(1);
         nameResult.innerHTML = "Ton nom de Pokémon est : <strong>" + name + "</strong>";
@@ -223,7 +223,7 @@ const generateManager = {
         // On récupere l'élément à cacher
         const divToHide = document.querySelector('.contenair');
         divToHide.classList.add('hidden');
-        console.log(divToHide)
+        // console.log(divToHide)
         // resultElement.classList.add('hidden');
         // On récupère les boutons print et back et on leur attache un écouteur d'évènement
         const printButton = document.querySelector('.print');
@@ -242,11 +242,11 @@ const generateManager = {
 
         // On récupère la div à afficher dans le DOM qui contiendra nos résultats
         const resultElement = document.querySelector('.results');
-        console.log(resultElement);
+        // console.log(resultElement);
 
         // On renseigne les champs voulus
         const typeResult = document.querySelector('.results .type');
-        console.log(typeResult);
+        // console.log(typeResult);
 
         typeResult.innerHTML = "Ton Pokémon est de type : <strong>" + type + "</strong>";
 
